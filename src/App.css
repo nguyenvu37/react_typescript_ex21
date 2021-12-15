@@ -51,7 +51,11 @@
   top: 20px;
 }
 
-.state .btn-login button {
+.btn-login {
+  margin-top: 20px;
+}
+
+.btn-login button {
   padding: 10px 15px;
   margin-left: 10px;
   border: none;
@@ -62,7 +66,7 @@
   box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.state .btn-login button:active {
+.btn-login button:active {
   background-color: #61dafb;
   box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.75);
   transform: translateY(1px);
