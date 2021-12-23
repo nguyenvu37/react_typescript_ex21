@@ -1,16 +1,23 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import React from 'react';
 import './App.css';
+import { Box } from './components/Context/Box';
+import { ThemeContextProvider } from './components/Context/ThemeContext';
+import { User } from './components/Context/User';
+import { UserContextProvider } from './components/Context/UserContext';
 import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
 import { Main } from './components/Main';
 import Person from './components/Person';
 import { PersonList } from './components/PersonList';
+import { MutableRef } from './components/Ref/MutableRef';
+import { Counter } from './components/StateComponents/Counter';
 import { LoggedIn } from './components/StateComponents/LoggedIn';
 import { Status } from './components/Status';
 import { Container } from './components/StyleProp/Container';
 import { Button } from './components/UltilComponents/Button';
 import { Input } from './components/UltilComponents/Input';
-import React from 'react';
+import { Separator } from './components/UltilComponents/Separator';
 
 function App() {
   const personName = {
@@ -50,19 +57,19 @@ function App() {
 
       {/* Event props */}
       <div className="event-props">
-        <p>
-          ----------------------------------------------------------------------------
-        </p>
-        <Button handleClick={(event) => console.log('Button clicked', event)} />
+        <Separator content="Event props" />
+        <Button
+          handleClick={(event) =>
+            console.log('Button clicked', event)
+          }
+        />
         <Input value="a" />
       </div>
       {/* End Advanced props */}
 
       {/* Style props */}
       <div className="style-props">
-        <p>
-          ----------------------------------------------------------------------------
-        </p>
+        <Separator content="Style props" />
         <Container
           styles={{
             border: '1px solid pink',
@@ -78,12 +85,36 @@ function App() {
 
       {/* Handle State with useState */}
       <div className="state">
-        <p>
-          ----------------------------------------------------------------------------
-        </p>
+        <Separator content="Handle State with useState" />
         <LoggedIn />
       </div>
       {/* End Handle State with useState */}
+
+      {/* Handle state with useReducer */}
+      <div className="reducer">
+        <Separator content="Handle state with useReducer" />
+        <Counter />
+      </div>
+      {/* End handle state with useReducer */}
+
+      {/* useContext with typescript */}
+      <div className="context">
+        <Separator content="Theme Context using useContext" />
+        <ThemeContextProvider>
+          <Box />
+        </ThemeContextProvider>
+        <UserContextProvider>
+          <User />
+        </UserContextProvider>
+      </div>
+      {/* End useContext with typescript */}
+
+      {/* useRef with typescript */}
+      <div className="ref">
+        <Separator content="useRef with typescript" />
+        <MutableRef />
+      </div>
+      {/* End useRef with typescript */}
     </div>
   );
 }

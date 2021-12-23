@@ -1,5 +1,11 @@
 {
+<<<<<<< HEAD
   "singleQuote": true,
   "tabWidth": 2,
   "printWidth": 80
+=======
+  "printWidth": 60,
+  "singleQuote": true,
+  "tabWidth": 2
+>>>>>>> 74f3fb4e2e02a1b1c3c4c88f34d0b762ac82663d
 }

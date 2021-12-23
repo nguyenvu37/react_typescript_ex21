@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
+=======
+  "cSpell.words": ["Anhvu"]
+}
+>>>>>>> 74f3fb4e2e02a1b1c3c4c88f34d0b762ac82663d
