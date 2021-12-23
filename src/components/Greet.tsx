@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 type GreetProps = {
@@ -6,7 +7,7 @@ type GreetProps = {
   isLoggedIn: boolean;
 };
 
-export const Greet = (props: GreetProps) => {
+export const Greet = (props: GreetProps): JSX.Element => {
   return (
     <div>
       {props.isLoggedIn ? (

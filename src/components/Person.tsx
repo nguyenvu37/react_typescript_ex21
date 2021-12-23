@@ -7,7 +7,7 @@ type PersonProps = {
   };
 };
 
-const Person = (props: PersonProps) => {
+const Person = (props: PersonProps): JSX.Element => {
   return (
     <div>
       {props.name.first} {props.name.last}

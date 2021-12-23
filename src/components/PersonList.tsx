@@ -7,7 +7,7 @@ type PersonListProps = {
   }[];
 };
 
-export const PersonList = ({ name }: PersonListProps) => {
+export const PersonList = ({ name }: PersonListProps): JSX.Element => {
   return (
     <div>
       {name.map((item, index) => (

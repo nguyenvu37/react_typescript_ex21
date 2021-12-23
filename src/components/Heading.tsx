@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
 type HeadingProps = {
-  children: React.ReactNode;
+  children: ReactElement;
 };
 
-export const Heading = (props: HeadingProps) => {
+export const Heading = (props: HeadingProps): JSX.Element => {
   return <div>{props.children}</div>;
 };

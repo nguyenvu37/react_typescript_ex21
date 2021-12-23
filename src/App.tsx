@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import './App.css';
 import { Greet } from './components/Greet';
 import { Heading } from './components/Heading';
@@ -9,6 +10,7 @@ import { Status } from './components/Status';
 import { Container } from './components/StyleProp/Container';
 import { Button } from './components/UltilComponents/Button';
 import { Input } from './components/UltilComponents/Input';
+import React from 'react';
 
 function App() {
   const personName = {
@@ -32,12 +34,12 @@ function App() {
   ];
 
   return (
-    <div className='App'>
+    <div className="App">
       <Greet name={'Anhvu'} age={27} isLoggedIn />
       <Person name={personName} />
       {/* Array props */}
       <PersonList name={nameList} />
-      <Status status='success' />
+      <Status status="success" />
       {/* Advanced props */}
       <Main>
         <Heading>
@@ -47,17 +49,17 @@ function App() {
       {/* End Advanced props */}
 
       {/* Event props */}
-      <div className='event-props'>
+      <div className="event-props">
         <p>
           ----------------------------------------------------------------------------
         </p>
         <Button handleClick={(event) => console.log('Button clicked', event)} />
-        <Input value='a' />
+        <Input value="a" />
       </div>
       {/* End Advanced props */}
 
       {/* Style props */}
-      <div className='style-props'>
+      <div className="style-props">
         <p>
           ----------------------------------------------------------------------------
         </p>
@@ -75,7 +77,7 @@ function App() {
       {/* End Style props */}
 
       {/* Handle State with useState */}
-      <div className='state'>
+      <div className="state">
         <p>
           ----------------------------------------------------------------------------
         </p>

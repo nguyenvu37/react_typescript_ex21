@@ -5,12 +5,12 @@ type AuthUser = {
   email: string;
 };
 
-export const LoggedIn = () => {
+export const LoggedIn = (): JSX.Element => {
   // const [user, setUser] = useState<AuthUser | null>(null); // trường hợp state là null
   const [user, setUser] = useState<AuthUser>({
     name: 'Guest',
     email: 'guest@example.com',
-  } as AuthUser); // trường hợp state là AuthUser
+  }); // trường hợp state là AuthUser
   const handleLogin = () => {
     setUser({
       name: 'Anhvu',
@@ -26,7 +26,7 @@ export const LoggedIn = () => {
   };
   return (
     <>
-      <div className='btn-login'>
+      <div className="btn-login">
         <button onClick={handleLogin}>Login</button>
         <button onClick={handleLogout}>Logout</button>
       </div>
